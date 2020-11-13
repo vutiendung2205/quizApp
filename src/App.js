@@ -8,10 +8,10 @@ import {
   Route
 } from "react-router-dom";
 import NotiDialog from './components/NotiDialog';
-import Results from './components/ResultsDialog';
 import ResultsDialog from './components/ResultsDialog';
 
 function App() {
+
   return (
     <Router>
         <div className="App">
@@ -24,9 +24,6 @@ function App() {
 
                 <Route path="/quiz" exact >
                     <ListQuestions />
-                </Route>
-                <Route path="/quiz/results" >
-                    <Results />
                 </Route>
 
             </Switch>

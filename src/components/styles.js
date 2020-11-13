@@ -57,6 +57,32 @@ const styles = (theme) =>{
           },
           showAnswer: {
             color: '#f30909de',
+          },
+          draggable: {
+            zIndex: 1000,
+            position: 'fixed',
+            bottom: '20%',
+            right:0,
+            float: 'left',
+            fontSize: '20px',
+            boxShadow: '0px 0px 20px 0px rgba(253, 29, 29, 0.8)',
+            cursor: 'move',
+            color: 'black',
+            width: '70px',
+            height: '70px',
+            borderRadius: '50%',
+            padding: '5px',
+            margin: '20px',
+            lineHeight: '70px',
+            userSelect: 'none',
+            backgroundColor: 'aliceblue',
+            fontFamily: 'Merriweather',
+          },
+          footer: {
+            marginTop: '30px',
+            height: '100px',
+            background: 'linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 48%, rgba(252,176,69,1) 100%)',
+            width: '100%'
           }
     })
 };

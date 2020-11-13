@@ -11,6 +11,7 @@ import { withStyles } from '@material-ui/core';
 import styles from './styles';
 import { isShowNotiDialog } from '../Slices/NotiDialogSlice';
 import { showResult } from '../Slices/ResultsSlice';
+import { stopT } from '../Slices/TimerSlice';
 
 
 const NotiDialog = (props) => {
@@ -23,7 +24,8 @@ const NotiDialog = (props) => {
     const handleSubmit = () => {
         // trả về dialog kết quả
         dispatch( isShowNotiDialog() );
-        dispatch( showResult() )
+        dispatch( showResult() );
+        dispatch( stopT() )
     }
     const open = useSelector(state=>state.notiDialog.showNotiDialog)
     return(

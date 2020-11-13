@@ -17,6 +17,8 @@ const ResultsDialog = (props) => {
     const classes = props.classes;
     const results = useSelector(state=>state.results);
     const data = useSelector(state=>state.data);
+    const seconds = useSelector(state=>state.timer.time);
+    const minutes = Math.floor(seconds/60);
     const reviewAnswers = () => {
         dispatch( showResult() );
         dispatch( isShowAnswer() )
@@ -40,6 +42,14 @@ const ResultsDialog = (props) => {
                 <p>Topic: <span className={classes.resultsDsc}>{results.topic}</span></p>
                 <p>Correct Answer: <span className={classes.resultsDsc}>{results.correctAnswer}</span></p>
                 <p>Total questions: <span className={classes.resultsDsc}>{data.length}</span></p>
+                <p>Time: <span className={classes.resultsDsc}>
+                    {
+                        minutes < 10 ? `0${minutes} ` : `${minutes} `
+                    }: 
+                    {
+                        seconds%60 < 10 ? ` 0${seconds%60}` : ` ${seconds%60}`
+                    }
+                </span></p>
                 <p>Score: <span className={classes.resultsDsc}>{Math.round(results.correctAnswer*100/data.length)} %</span></p>
             </DialogContent>
 

@@ -9,6 +9,7 @@ import styles from './styles';
 import Button from '@material-ui/core/Button';
 import { GetQuestionsRequest } from '../Api';
 import { Redirect } from 'react-router-dom';
+import { startT } from '../Slices/TimerSlice';
 // import { Redirect } from 'react-router-dom';
 
 const Parameters = (props) => {
@@ -33,6 +34,7 @@ const Parameters = (props) => {
     const handleSubmit = () => {
         let { category,level,number } = parameters;
         dispatch( GetQuestionsRequest(category,level,number) );
+        dispatch( startT() )
     }
     const data = useSelector(state => state.data);
     return(

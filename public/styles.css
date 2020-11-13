@@ -1,4 +1,11 @@
 .App {
   height: 100vh;
 }
+
+.App h1 {
+  font-size: 36px;
+  background: -webkit-linear-gradient(#833ab4, #fd1d1d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /*# sourceMappingURL=styles.css.map */
